@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net9.0;net10.0</TargetFrameworks>
+    <RootNamespace>Tamp.Testcontainers.V4</RootNamespace>
+    <AssemblyName>Tamp.Testcontainers.V4</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Package">
+    <PackageId>Tamp.Testcontainers.V4</PackageId>
+    <Description>Tamp diagnostic library for testcontainers-dotnet pipelines. Probes whether the current process can reach Docker (socket / DOCKER_HOST / `docker info` exit code) AND whether the process is itself running inside Docker without a mounted socket — the "sibling containers" trap that silently makes integration tests hang. Returns a typed DockerCapability for OnlyWhen() gates and diagnostic logs. Not a CLI wrapper.</Description>
+    <IsPackable>true</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="$(TampCorePath)" Condition="'$(TampCoreMode)' == 'project'" />
+    <PackageReference Include="Tamp.Core" Condition="'$(TampCoreMode)' == 'package'" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
+  </ItemGroup>
+
+</Project>
