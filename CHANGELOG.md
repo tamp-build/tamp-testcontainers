@@ -4,6 +4,8 @@ All notable changes to this package are recorded here. [Keep a Changelog](https:
 
 ## [Unreleased]
 
+## [0.1.1] — 2026-09-27
+
 ### Added
 
 - Package now ships XML documentation files (`.xml`) alongside the assembly, so consumers get IntelliSense and API docs. (Mirrors [tamp-build/tamp#3](https://github.com/tamp-build/tamp/pull/50).)
